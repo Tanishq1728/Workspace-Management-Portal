@@ -1,0 +1,25 @@
+.fade-enter {
+  opacity: 0;
+  transform: translateY(10px);
+}
+.fade-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 160ms ease-in-out, transform 160ms ease-in-out;
+}
+.fade-exit {
+  opacity: 1;
+  transform: translateY(0);
+}
+.fade-exit-active {
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 160ms ease-in-out, transform 160ms ease-in-out;
+}
+
+.transition-wrapper {
+  min-height: 100vh;
+  background-color: #f5f5f5; /* your off-white background */
+  position: relative;
+  overflow: hidden;
+}
