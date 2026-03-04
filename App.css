@@ -1,0 +1,6 @@
+.projects-manager-container,
+.transition-wrapper,
+.App {
+  position: relative;
+  z-index: 0;
+}
