@@ -1,0 +1,215 @@
+/* 🔵 Leaves.jsx Styles */
+.leaves-container {
+  padding: 1rem;
+  max-width: 990px;
+  margin: auto;
+}
+
+.leaves-heading {
+  font-size: 2rem;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+.leaves-form {
+  background: #fdfdfd;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.07);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  align-items: end;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  margin-bottom: 0.3rem;
+  font-weight: 500;
+  color: #444;
+}
+
+.form-group select,
+.form-group input {
+  padding: 0.6rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.submit-button {
+  background-color: #007bff;
+  color: white;
+  padding: 0.7rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 250ms ease;
+}
+
+.submit-button:hover {
+  background-color: #0056b3;
+}
+
+.action-btn {
+  padding: 6px 12px;
+  margin-right: 6px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.delete-btn {
+  background-color: #dc3545;
+  color: white;
+}
+
+.cancel-btn {
+  background-color: #f31a1a;
+  margin-top: 10px;
+}
+
+.cancel-btn:hover {
+  background-color: #ca0808;
+}
+
+.update-btn {
+  background-color: #ffc107;
+  color: rgb(0, 0, 0);
+  border-color: #ffffff;
+}
+
+.leave-type-badge {
+  padding: 6px 10px;
+  border-radius: 20px;
+  font-weight: 500;
+  font-size: 0.9rem;
+  display: inline-block;
+  color: rgb(0, 0, 0);
+}
+
+.leave-type-badge.sick-leave {
+  background-color: #ff6b6b;
+}
+.leave-type-badge.casual-leave {
+  background-color: #f9a825;
+}
+.leave-type-badge.paid-leave {
+  background-color: #26a69a;
+}
+.leave-type-badge.maternity-leave {
+  background-color: #7e57c2;
+}
+.leave-type-badge.work-from-home {
+  background-color: #42a5f5;
+}
+
+.leave-table-scroll {
+  max-height: 300px;
+  overflow-y: auto;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.leave-table-history {
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+}
+
+.leave-table-history thead th {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  background-color: #343a40;
+  color: white;
+  font-weight: 600;
+  padding: 0.8rem;
+  text-align: center;
+}
+
+.leave-table-history td {
+  border: 1px solid #ddd;
+  padding: 0.8rem;
+  text-align: center;
+  background-color: #fff;
+  color: #000;
+  word-wrap: break-word;
+}
+
+.leave-table-history tr:hover {
+  background-color: #f4f4f4;
+}
+
+/* 🟠 LeaveReports.jsx Styles */
+.table-heading {
+  font-size: 1.4rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  text-align: center;
+  color: #1e3a8a;
+}
+
+.leave-reports-scroll {
+  max-height: 400px;
+  overflow-y: auto;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+}
+
+.leave-reports-table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.leave-reports-table thead th {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  background-color: #343a40;
+  color: white;
+  font-weight: 600;
+  padding: 0.8rem;
+  text-align: center;
+}
+
+.leave-reports-table td {
+  border: 1px solid #ddd;
+  padding: 0.8rem;
+  text-align: center;
+  background-color: #fff;
+  color: #000;
+  word-wrap: break-word;
+}
+
+.leave-reports-table tr:hover {
+  background-color: #f4f4f4;
+}
+
+.filter-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  align-items: center;
+}
+
+.filter-toolbar input,
+.filter-toolbar select {
+  padding: 8px 12px;
+  font-size: 0.95rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+}
