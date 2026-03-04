@@ -1,0 +1,179 @@
+/* Root container for the login page */
+.login-page {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Background image layer */
+.login-background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 0;
+}
+
+/* Overlay to control perceived background opacity */
+.login-background-image::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Increase alpha for a darker overlay */
+  z-index: 1;
+}
+
+
+/* Optional dark overlay for improved contrast */
+.login-page::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+
+/* Lottie animation container */
+.lottie-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* Main form container */
+.container {
+  position: relative;
+  z-index: 3;
+  min-height: 100vh;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 1rem;
+  box-sizing: border-box;
+  margin-bottom: 0;
+}
+
+/* Make sure row can grow if needed */
+.row.justify-content-center.align-items-center {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  min-height: 100%;
+}
+
+/* Ensure column centers child form */
+.col-md-6, .col-lg-5 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Login form wrapper — now wider */
+.login-wrap {
+  position: relative;
+  z-index: 4;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 12px;
+  padding: 3rem 2.5rem;
+  width: 100%;
+  max-width: 500px; /* Adjusted horizontal size */
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.25);
+  animation: fadeInUp 0.6s ease-out forwards;
+  opacity: 0;
+  transform: translateY(20px);
+  color: #222;
+  overflow: visible;
+  box-sizing: border-box;
+}
+
+/* Smooth fade-in animation */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0; /* Starts invisible */
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1; /* Ends fully visible */
+    transform: translateY(0);
+  }
+}
+
+
+/* Input fields — expand horizontally */
+.login-form .form-control {
+  height: 48px;
+  font-size: 17px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  padding: 12px 16px;
+  background-color: #fff;
+  color: #333;
+  transition: all 0.3s ease;
+}
+
+.login-form .form-control:focus {
+  border-color: #ffffff;
+  box-shadow: 0 0 0 3px rgba(3, 158, 255, 0.2);
+  outline: none;
+}
+
+/* Primary button styling */
+.btn-primary {
+  background: linear-gradient(to right, #0083cf, #0083cf);
+  border: none;
+  padding: 13px;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: #fff;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 15px rgba(0, 242, 255, 0.3);
+}
+
+.btn-primary:hover {
+  background: linear-gradient(to right, #039eff, #039eff);
+  transform: scale(1.04);
+}
+
+/* Alert message styling */
+.alert-danger {
+  background-color: #fbe4e6;
+  border: 1px solid #f5c6cb;
+  color: #c0392b;
+  padding: 10px;
+  font-size: 14px;
+  border-radius: 4px;
+}
+.m-0 {
+  font-family: arial sans-serif;
+  font-size: 37px;
+  margin: 0;
+  padding: 0;
+  color: #333;
+  text-align: center;
+}
