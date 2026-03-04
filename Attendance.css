@@ -1,0 +1,119 @@
+.attendance-container {
+  padding: 2rem;
+  background-color: #f7f9fc;
+  min-height: 100vh;
+}
+
+.attendance-container h3 {
+  color: #343a40;
+  font-weight: 600;
+  font-size: 1.8rem;
+  margin-bottom: 0rem;
+}
+
+.attendance-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  align-items: center;
+}
+
+.attendance-filters input,
+.attendance-filters select {
+  padding: 0.6rem 0.8rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  min-width: 160px;
+  background-color: #fff;
+  font-size: 0.9rem;
+}
+
+.attendance-filters select {
+  cursor: pointer;
+}
+
+.attendance-table {
+  width: 100%;
+  border-collapse: collapse;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+  background-color: #fff;
+}
+
+.attendance-table th,
+.attendance-table td {
+  padding: 0.75rem;
+  border: 1px solid #e1e1e1;
+  text-align: center;
+  font-size: 0.92rem;
+}
+
+.attendance-table th {
+  background-color: #2d2d2d;
+  color: white;
+  font-weight: 500;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.attendance-table tbody tr:hover {
+  background-color: #f0f4ff;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.punch-in {
+  color: green;
+  font-weight: bold;
+}
+
+.punch-out {
+  color: red;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .attendance-filters {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .attendance-table th,
+  .attendance-table td {
+    font-size: 0.85rem;
+    padding: 0.5rem;
+  }
+}
+.attendance-header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.sync-button {
+  background-color: #3a5fc8;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.sync-button:hover {
+  background-color: #294bb0;
+}
+
+.sync-status {
+  font-size: 0.9rem;
+  color: #555;
+}
+.attendance-table-wrapper {
+  max-height: 500px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  background: #fff;
+}
